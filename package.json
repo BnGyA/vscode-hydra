@@ -3,6 +3,7 @@
   "displayName": "Hydra",
   "description": "Stay hydrated with vscode reminders",
   "version": "1.0.0",
+  "publisher": "BenjaminRochez",
   "engines": {
     "vscode": "^1.60.0"
   },

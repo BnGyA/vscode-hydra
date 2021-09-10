@@ -24,7 +24,7 @@ var setHydra = function (duration) {
 
 // this method is called when the extension is activated
 function activate(context) {
-  setHydra(10);
+  setHydra(60);
 
   console.log("Congratulations, Hydra is now activated!");
 
