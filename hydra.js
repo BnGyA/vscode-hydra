@@ -3,49 +3,46 @@ const datefns = require("date-fns");
 const moment = require("moment");
 
 const placeholder = ["30"];
-const timer = null;
+let timer = null;
 
-// Main function
 var setHydra = function (duration) {
-  let reminderMessage = ` I will remind you every ${duration} minutes to drink 💧 Happy coding!`;
+  let reminderMessage = ` I will remind you every ${duration} minutes to drink 💧  Happy coding!`;
   vscode.window.showInformationMessage(reminderMessage);
 
   var currentTime = new Date();
-  var newDate = moment(currentTime).add(duration, "s").toDate();
+  var newDate = moment(currentTime).add(duration, "m").toDate();
 
   const timePeriod = datefns.differenceInMilliseconds(newDate, currentTime);
   timer = setInterval(function () {
-    vscode.window.showInformationMessage(` Drink water now! 💧`).then(() => {
-      //clearTimeout(timer);
-    });
+    vscode.window
+      .showInformationMessage(`It's time to drink some water! 💧`)
+      .then(() => {
+        //Timeout(timer);
+      });
   }, timePeriod);
 };
 
 // this method is called when the extension is activated
 function activate(context) {
-  // onStartupFinished Run setHydra with the default value
-  setHydra(5);
+  setHydra(10);
 
   console.log("Congratulations, Hydra is now activated!");
 
-  let disposable = vscode.commands.registerCommand(
-    "hydra.helloWorld",
-    function () {
-      vscode.window
-        .showInputBox({
-          ignoreFocusOut: true,
-          placeHolder: `${placeholder}`,
-          prompt: `Enter the hydration's delay in minuts! 💧`,
-        })
-        .then((duration) => {
-          if (!duration) {
-            return;
-          }
-          clearInterval(timer);
-          setHydra(duration);
-        });
-    }
-  );
+  let disposable = vscode.commands.registerCommand("hydra.update", function () {
+    vscode.window
+      .showInputBox({
+        ignoreFocusOut: true,
+        placeHolder: `${placeholder}`,
+        prompt: `Enter the hydration's delay in minuts! 💧`,
+      })
+      .then((duration) => {
+        if (!duration) {
+          return;
+        }
+        clearInterval(timer);
+        setHydra(duration);
+      });
+  });
 
   context.subscriptions.push(disposable);
 }

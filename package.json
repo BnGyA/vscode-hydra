@@ -1,23 +1,52 @@
 {
   "name": "hydra",
   "displayName": "Hydra",
-  "description": "Stay hydrated",
-  "version": "0.0.1",
+  "description": "Stay hydrated with vscode reminders",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.60.0"
   },
   "categories": [
     "Other"
   ],
+  "bugs": {
+    "email": "rochez.benjamin@gmail.com",
+    "url": "https://github.com/BenjaminRochez/vscode-hydra/issues"
+  },
+  "galleryBanner": {
+    "theme": "dark",
+    "color": "#3E0E0E"
+  },
+  "homepage": "https://github.com/BenjaminRochez/vscode-hydra",
+  "icon": "images/logo128.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BenjaminRochez/vscode-hydra"
+  },
+  "author": {
+    "email": "rochez.benjamin@gmail.com",
+    "name": "Rochez Benjamin",
+    "url": "https://twitter.com/BenjaminRochez"
+  },
+  "readme": "README.md",
+  "license": "MIT",
+  "keywords": [
+    "hydrated",
+    "reminder",
+    "todo",
+    "timer",
+    "productivity",
+    "note"
+  ],
   "activationEvents": [
-    "onCommand:hydra.helloWorld",
+    "onCommand:hydra.update",
     "onStartupFinished"
   ],
   "main": "./hydra.js",
   "contributes": {
     "commands": [
       {
-        "command": "hydra.helloWorld",
+        "command": "hydra.update",
         "title": "Hydra update delay"
       }
     ]

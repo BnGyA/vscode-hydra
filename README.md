@@ -1,65 +1,47 @@
-# hydra README
+<div align="center">
 
-This is the README for your extension "hydra". After writing up a brief description, we recommend including the following sections.
+<img src="./images/logo.png" height="125" width="125" />
+<a href="#" align="center"><h1>Hydra</h1></a>
+
+<p align="center">
+In the coding madness ? It's important to stay hydrated to not break the flow 👩‍💻🔥
+<br/>Let vscode remind you to drink some water 💧
+</p>
+
+</div>
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+<img src="./images/demo.gif" />
 
-For example if there is an image subfolder under your extension project workspace:
+## 🤟🏻 Getting Started
 
-\!\[feature X\]\(images/feature-x.png\)
+- Install the extension via the vscode marketplace
+- Change the reminder delay by opening the command pannel (cmd+p) & searching `hydra update delay`
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## 📙 Requirements
 
-## Requirements
+- vscode
+- Obvisouly : 💦
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## 🚀 Upcoming features
 
-## Extension Settings
+- Allow the user to keep track of how much he drank
+- Allow the user to snooze the reminder
+- Allow the user to change the reminder default value
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## 💡 Inspiration
 
-For example:
+- [Twind](https://github.com/tw-in-js/twind) for their amazing README
 
-This extension contributes the following settings:
+## Issue/Feedback:
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+Log them in the [github issues](https://github.com/BenjaminRochez/vscode-hydra/issues) or hit me on [twitter](https://twitter.com/benjaminrochez).
 
-## Known Issues
+## 🤝 Contributing
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+Feel free to make a PR
 
-## Release Notes
+## ⚖️ License
 
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+The [MIT license](https://github.com/tw-in-js/twind/blob/main/LICENSE) governs your use of Hydra.
