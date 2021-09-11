@@ -7,7 +7,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [Unreleased]
 
 - Allow the user to keep track of how much he drank
-- Allow the user to snooze the reminder
+
+## [1.1.0] - 2021-09-11
+
+- You can now snooze the reminder. It will mute the notification for 1 day. You can reactivate by using the hydra.update command
 
 ## [1.0.1] - 2021-09-10
 

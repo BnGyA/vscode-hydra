@@ -5,18 +5,33 @@ const moment = require("moment");
 const placeholder = ["30"];
 let timer = null;
 
-var setHydra = function (duration) {
+var setHydra = function (duration, snooze = false) {
   let reminderMessage = ` I will remind you every ${duration} minutes to drink 💧  Happy coding!`;
-  vscode.window.showInformationMessage(reminderMessage);
 
   var currentTime = new Date();
-  var newDate = moment(currentTime).add(duration, "m").toDate();
+  if (!snooze) {
+    var newDate = moment(currentTime).add(duration, "m").toDate();
+  } else {
+    var newDate = moment(currentTime).add(1, "d").toDate();
+    reminderMessage = `Have a wonderful day 💧`;
+  }
+
+  vscode.window.showInformationMessage(reminderMessage);
 
   const timePeriod = datefns.differenceInMilliseconds(newDate, currentTime);
   timer = setInterval(function () {
     vscode.window
-      .showInformationMessage(`It's time to drink some water! 💧`)
-      .then(() => {
+      .showInformationMessage(
+        `It's time to drink some water! 💧`,
+        ...["Ok!", "Snooze for the day"]
+      )
+      .then((selection) => {
+        if (selection === "Ok!") {
+          return;
+        } else if (selection === "Snooze for the day") {
+          clearInterval(timer);
+          setHydra(0, true);
+        }
         //Timeout(timer);
       });
   }, timePeriod);

@@ -27,7 +27,6 @@ In the coding madness ? It's important to stay hydrated to not break the flow �
 ## 🚀 Upcoming features
 
 - Allow the user to keep track of how much he drank
-- Allow the user to snooze the reminder
 - Allow the user to change the reminder default value
 
 ## 💡 Inspiration
