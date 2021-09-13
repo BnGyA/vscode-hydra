@@ -2,7 +2,7 @@
   "name": "hydra",
   "displayName": "Hydra",
   "description": "Stay hydrated with vscode reminders",
-  "version": "1.0.1",
+  "version": "1.1.2",
   "publisher": "BenjaminRochez",
   "engines": {
     "vscode": "^1.60.0"
@@ -43,7 +43,7 @@
     "onCommand:hydra.update",
     "onStartupFinished"
   ],
-  "main": "./hydra.js",
+  "main": "./src/hydra.js",
   "contributes": {
     "commands": [
       {
